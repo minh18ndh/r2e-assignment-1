@@ -59,14 +59,10 @@ public class CarService {
     public void RemoveByModel() {
         string model = inputHandler.GetValidModel();
 
-        int removedNum = cars.RemoveAll(car => car.Model.Equals(model, StringComparison.OrdinalIgnoreCase));
+        int totalRemoved = cars.RemoveAll(car => car.Model.Equals(model, StringComparison.OrdinalIgnoreCase));
 
-        if (removedNum > 0) {
-            Console.WriteLine("\nCar(s) removed successfully.");
-        }
+        if (totalRemoved > 0)  Console.WriteLine("\nCar(s) removed successfully.");
 
-        else {
-            Console.WriteLine("\nNo car found.");
-        }
+        else  Console.WriteLine("\nNo car found.");
     }
 }
