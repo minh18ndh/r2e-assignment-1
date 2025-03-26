@@ -33,7 +33,7 @@ public class InputHandler {
         while (true) {
             Console.Write("Enter Year: ");
             if (int.TryParse(Console.ReadLine(), out year) && year > 1900 && year < 2026)  break;
-            Console.WriteLine("Invalid! Year must be bigger than 1900 and smaller than 2026.");
+            Console.WriteLine("Invalid! Year must fall between 1900 and 2026.");
         }
 
         return year;
@@ -47,7 +47,7 @@ public class InputHandler {
             if (Enum.TryParse(Console.ReadLine()?.Trim(), true, out type)) {
                 break;
             }
-            Console.WriteLine("Invalid! Car type must be fuel or electric.");
+            Console.WriteLine("Invalid! Car type must be 'Fuel' or 'Electric'.");
         }
 
         return type;
